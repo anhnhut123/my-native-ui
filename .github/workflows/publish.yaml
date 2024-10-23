@@ -21,7 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set up npm auth
+        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
+
       - name: Publish package
-        run: npm publish --access public
+        run: npm publish --access public --otp ${{ secrets.NPM_OTP }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_OTP: ${{ secrets.NPM_OTP }}
