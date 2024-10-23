@@ -20,6 +20,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+      
+      - name: Npm add user
+        run: npm adduser
+
 
       - name: Publish package
         run: npm publish --access public
