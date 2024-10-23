@@ -1,6 +1,6 @@
 # my-native-ui
 
-The lightweigh libary support ui components for react-native.
+The lightweigh libary support ui components for react-native
 
 ## Installation
 
